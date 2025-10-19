@@ -19,7 +19,7 @@ metadata:
   namespace: mongodb
 spec:
   serviceName: "mongodb"
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: mongodb
