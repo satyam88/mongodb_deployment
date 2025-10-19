@@ -36,7 +36,7 @@ spec:
                   - key: topology.kubernetes.io/zone
                     operator: In
                     values:
-                      - ap-south-1a   # replace with your actual node AZ
+                      - ap-south-1a   # replace with your node AZ
       containers:
         - name: mongodb
           image: mongo:6.0
