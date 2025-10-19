@@ -28,6 +28,15 @@ spec:
       labels:
         app: mongodb
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: topology.kubernetes.io/zone
+                    operator: In
+                    values:
+                      - ap-south-1a   # replace with your actual node AZ
       containers:
         - name: mongodb
           image: mongo:6.0
